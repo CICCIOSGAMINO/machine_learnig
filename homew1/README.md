@@ -1,5 +1,6 @@
-Machine Learning - Caltech-CS156
-================================
+1 - homework 
+============
+[TOC]
 
 ### Intro
-Simple repository for the Machine Learning course exercises, easy to fork !
+The Perceptron learning algorithm
