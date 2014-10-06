@@ -32,13 +32,34 @@ iters = 10000;
 # balls for every bags 
 nballs = 2; 
 # the bags (with black-1 and withe-0 balls) 
-bags = [[0 1], [1 1]];
+bags = [[0 1] ; [1 1]];
 
-# pick at random a bag (randperm(2) -> [1 2] or [2 1] i hold only the first (1, :)) 
-bag = bags(randperm (length (bags)), :)(1, :);
 
-# shuffle the balls in the bag 
-balls = bag(randperm(nballs), :)
+# loop on the experiments 
+for i = 1:iters
+
+    # pick at random a bag (randperm(2) -> [1 2] or [2 1] i hold only the first (1, :)) 
+    bag = bags(randperm (length (bags)), :)(1, :);
+    
+    # shuffle the balls in the bag 
+    balls = bag(: , randpemr(nballs));
+    
+    # shuold not be considered if i pick firs the withe 
+    if balls(1) != 1
+        results(i) = 2;
+        continue;
+    endif 
+    
+    # pick the ramaining ball from the bag 
+    results(i) = balls(2);
+    
+endfor 
+
+# remove the invalid experiment from the vector results ( results(i) = 2 , invalid )
+results = resutls(find(results != 2));
+
+# show the results 
+printf("Probability of pick the bag with two black balls : %.6f\n", mean (results));
 
 
 
