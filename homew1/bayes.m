@@ -30,8 +30,15 @@
 # iterations, we need more iteration to converge 
 iters = 10000;
 # balls for every bags 
-nball = 2; 
-# bags = [[0 1], [1 1]];
+nballs = 2; 
+# the bags (with black-1 and withe-0 balls) 
+bags = [[0 1], [1 1]];
+
+# pick at random a bag (randperm(2) -> [1 2] or [2 1] i hold only the first (1, :)) 
+bag = bags(randperm (length (bags)), :)(1, :);
+
+# shuffle the balls in the bag 
+balls = bag(randperm(nballs), :)
 
 
 
