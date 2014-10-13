@@ -12,3 +12,7 @@ In unsupervised learning, no labels are given to the learning algorithm, leaving
 
 ### Reinforcement Learning 
 In reinforcement learning, a computer program interacts with a dynamic environment in which it must perform a certain goal (such as driving a vehicle), without a teacher explicitly telling it whether it has come close to its goal or not.
+
+
+### Detail 
+Here you can find only the main algorithms used in Machine Learning for a complete course surf the web, there are a very good one in Caltech Institute. 
