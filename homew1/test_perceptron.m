@@ -1,6 +1,5 @@
-#############################################################
-#  simple perceptron example test - perceptron(X,y,w_init)  #
-#############################################################
+1;
+# ------------------------------------- Perceptron ------------------------------------
 
 clear all;
 
@@ -19,8 +18,7 @@ wtag=perceptron(X,Y,w);
 % predict
 ytag=wtag'*X;
 
-
-#################### plot section ########################
+# ----------------------------------------- Plot -----------------------------------------
 
 % plot prediction over origianl data
 figure;hold on
@@ -35,7 +33,7 @@ plot(X(1,ytag<0),X(2,ytag<0),'bo')
 plot(X(1,ytag>0),X(2,ytag>0),'ro')
 legend('class -1','class +1','pred -1','pred +1')
 
-#####################  show the Result  ###################
+# ------------------------------------------ Result --------------------------------------
 
 disp ("The Number of (+) Points :"), disp (Xplus)
 disp ("The Number of (-) Points :"), disp (Xminus)
